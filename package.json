@@ -1,0 +1,26 @@
+{
+  "name": "frontend_backend_reply",
+  "version": "1.0.0",
+  "description": "Projeto Reply Backend ",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samuel-v09/Frontend_Backend_Reply.git"
+  },
+  "author": "Samuel Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samuel-v09/Frontend_Backend_Reply/issues"
+  },
+  "homepage": "https://github.com/Samuel-v09/Frontend_Backend_Reply#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.12.0"
+  }
+}

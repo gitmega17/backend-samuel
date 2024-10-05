@@ -1,0 +1,120 @@
+0) Conexão com Banco de Dados
+
+ - Abrir DBeaver
+ - Nova Conexão
+ - Selecionar Postgre como banco de Dados
+ - Selecionar Host
+ - Preencher os seguintes campos:
+    Senha : aZKtN3D1Fu0z8LjQx4Kkfx21L7PGPu3S
+
+    host : dpg-crjjmqij1k6c73fn53m0-a.oregon-postgres.render.com
+
+    user : database_reply_user
+
+    database : database_reply
+
+- Clicar em Testar Conexão
+- Concluir
+
+
+1) Cadastro
+
+  - Abrir Postman
+  - Selecionar Requisição Postman (POST)
+  - Clicar em Body
+  - Clicar em raw
+  - Selecionar JSON
+
+  - Colar URL
+        Testando Localmente: http://localhost:3000/cadatro (Terminal VScode)
+        Testando na nuvem : https://backend-clu7.onrender.com/cadastro (Clone com máquina local no Github)
+
+  - Inserir o seguinte corpo 
+    {
+        "username" : "Samuel Victor",
+        "password" : "12345"
+    }
+
+  - Clicar em send
+
+(OK)
+
+2) Login
+  - Abrir Postman
+  - Selecionar Requisição Postman (POST)
+  - Clicar em Body
+  - Clicar em raw
+  - Selecionar JSON
+
+  - Colar URL
+        Testando Localmente: http://localhost:3000/Login (Terminal VScode)
+        Testando na nuvem : https://backend-clu7.onrender.com/login (Clone com máquina local no Github)
+
+  - Inserir o seguinte corpo 
+    {
+        "username" : "Samuel Victor",
+        "password" : "12345"
+    }
+
+  - Clicar em send
+  
+  - No terminal do Postman Pegar o Token:
+{
+    "message": "Login realizado com Sucesso.",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJTYW11ZWwgVmljdG9yIiwiaWF0IjoxNzI2MzY2MzAxLCJleHAiOjE3MjYzNzM1MDF9.aSjcOW3eLZTKz_o8_Ovy2fqVJiXtvlXkYGwBztLBKCY"
+}
+Obs: Este é somente exemplo deve se pegar o token que foi fornecido
+
+
+3) Inserindo Dados
+  - Abrir Postman
+  - Selecionar Requisição Postman (POST)
+  - Clicar em Body
+  - Clicar em raw
+  - Selecionar JSON
+
+  - Colar URL
+        Testando Localmente: http://localhost:3000/inserir_dados_motores (Terminal VScode)
+        Testando na nuvem : https://backend-clu7.onrender.com/inserir_dados_motores' (Clone com máquina local no Github)
+
+  - Inserir o seguinte corpo 
+{
+  "dados_sensores_motores": {
+    "Motor01": {
+      "Temperatura": 30,
+      "Frequencia": 60,
+      "Corrente": 3,
+      "Vibracao": "ok",
+      "Pressao": 1
+    },
+    "Motor02": {
+      "Temperatura": 28,
+      "Frequencia": 60,
+      "Corrente": 3,
+      "Vibracao": "nok",
+      "Pressao": 1.5
+    }
+  }
+}
+
+- Clicar em Authorization
+- Inserir o Token sem aspas duplas "" fornecido anteriormente nos passos acima para efetuar o post
+- Clicar em send
+
+4) Coletando Dados
+  - Abrir Postman
+  - Selecionar Requisição Postman (GET)
+
+   - Colar URL
+        Selecionando todos os dados:
+        Testando Localmente: http://localhost:3000/coletando_dados_motores (Terminal VScode)
+        Testando na nuvem : https://backend-clu7.onrender.com/coletando_dados_motores (Clone com máquina local no Github)
+
+        Selecionando os dados pelo numero da coleta
+        Testando Localmente: http://localhost:3000/coletando_dados_motores/1 (Terminal VScode)
+        Testando na nuvem : https://backend-clu7.onrender.com/coletando_dados_motores/1 (Clone com máquina local no Github)
+
+
+  - Clicar em Authorization
+  - Inserir o Token sem aspas duplas "" fornecido anteriormente nos passos acima para efetuar o get
+  - Clicar em send
