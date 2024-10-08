@@ -12,8 +12,9 @@ const server = http.createServer(app);
 server.keepAliveTimeout = 30000;
 server.headersTimeout = 10000;
 
-app.listen(PORTA, () => {
-    console.log(`Servidor conectado e rodando em http://localhost:${PORTA}`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
 });
 
 app.timeout = 0;

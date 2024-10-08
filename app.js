@@ -6,8 +6,9 @@ const middleware = require('./middleware_auth');
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'http://localhost:3001'
+    origin: 'https://frontend-app-url.onrender.com' // Substitua pela URL do frontend no Render
 }));
+
 
 app.use(express.json());
 
