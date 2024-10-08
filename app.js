@@ -14,8 +14,6 @@ app.use(express.json());
 
 app.use('/', g_routes);
 
-app.use('/inserir_dados_motores', middleware);
-app.use('/colentando_dados_motores', middleware);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
