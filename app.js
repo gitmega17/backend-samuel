@@ -3,6 +3,11 @@ const app = express();
 const pool = require('./config/db');
 const g_routes = require('./routes_general/g_routes');
 const middleware = require('./middleware_auth');
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'http://localhost:3001'
+}));
 
 app.use(express.json());
 
