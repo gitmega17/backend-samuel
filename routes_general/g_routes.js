@@ -11,11 +11,11 @@ const authMiddleware = require('../middleware_auth');
 router.post('/cadastro', g_routes_cadastro.cadastro_usuario);
 router.post('/login', g_routes_login.login_user);
 
-router.post('/inserir_dados_motores', authMiddleware, g_routes_post.inserirDadosMotores);
+router.post('/inserir_dados_motores', g_routes_post.inserirDadosMotores);
 router.post('/gerar_relatorio', g_routes_gerarRelatorio.gerarRelatorio);
 
-router.get('/coletando_dados_motores', authMiddleware, g_routes_get.coletarDadosMotores);
-router.get('/coletando_dados_motores/:coletaID', authMiddleware, g_routes_get.coletarDadosMotores);
+router.get('/coletando_dados_motores', g_routes_get.coletarDadosMotores);
+router.get('/coletando_dados_motores/:coletaID', g_routes_get.coletarDadosMotores);
 
 
 module.exports = router;
